@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload an SRT file</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Upload an SRT file to convert to TXT</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <!-- Hidden file input -->
+        <input type="file" id="file-input" name="file" accept=".srt" required>
+
+        <!-- Custom styled button to trigger the file input -->
+        <label for="file-input" class="button-5">Choose SRT File</label>
+        <input type="submit" value="Upload" class="button-5">
+    </form>
+</body>
+</html>
